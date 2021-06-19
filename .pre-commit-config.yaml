@@ -1,0 +1,9 @@
+default_stages: [commit]
+fail_fast: true
+
+repos:
+  - repo: git://github.com/igorshubovych/markdownlint-cli
+    rev: v0.23.2
+    hooks:
+      - id: markdownlint
+        entry: markdownlint --ignore .github/*.md
