@@ -1,7 +1,5 @@
 # Summary
 
-* [Blog Link](https://dkim577.gitbook.io/algorithm)
-
 * [Spring]()
   * [Annotation](Spring/base.annotations.md)
 
