@@ -1,6 +1,6 @@
 # Table of Contents
 
-## [Blog Link](https://dkim577.gitbook.io/algorithm)
+## [Visit Blog](https://dkim577.gitbook.io/algorithm)
 
 ### syntax.md
 
