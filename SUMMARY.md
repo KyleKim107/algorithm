@@ -4,10 +4,11 @@
   * [Annotation](Spring/base.annotations.md)
   * [IntelliJ Shortcut](Spring/base.intelliJ_ShortCut.md)
   * [Library](Spring/base.library.md)
+  * [Errors](Spring/base.errors.md)
 
 * [Syntax](syntax/syntax.md)
   * [Operation](syntax/operation.md)
-  * [Operation](syntax/conditional.md)
+  * [conditional](syntax/conditional.md)
   * [Loop](syntax/loop.md)
 
 * [Data Structure]()
