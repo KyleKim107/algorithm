@@ -2,6 +2,8 @@
 
 * [Spring]()
   * [Annotation](Spring/base.annotations.md)
+  * [IntelliJ Shortcut](Spring/base.intelliJ_ShortCut.md)
+  * [Library](Spring/base.library.md)
 
 * [Syntax](syntax/syntax.md)
   * [Operation](syntax/operation.md)
