@@ -1,5 +1,9 @@
 # JPA
 
+## DaoAuthenticationProvider
+
+## BCryptPasswordEncoder
+
 ## Spring Security
 
 * Creates default login page!
@@ -19,6 +23,11 @@
   * public boolean isCredentialsNonExpired()
 
   * public boolean isEnabled()
+
+> WebSecurityConfigurerAdapter refer [Link](https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/)
+
+    * @EnableWebSecurity
+    ![](images/20210622_004029.png)
 
 ## Hibernate
 
