@@ -7,3 +7,7 @@
 > java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
 
     * Go to Application.Property file, then input spring.datasource.password= your password without double quot!!
+
+> Dependency 'org.webjars:bootstrap not found
+
+    * Reload Maven or Gradle dependency
