@@ -10,6 +10,7 @@
   * [Operation](syntax/operation.md)
   * [conditional](syntax/conditional.md)
   * [Loop](syntax/loop.md)
+  * [Python](syntax/Python.md)
 
 * [Data Structure]()
   * [String](data-structure/string.md)

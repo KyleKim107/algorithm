@@ -27,7 +27,33 @@
 > WebSecurityConfigurerAdapter refer [Link](https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/)
 
     * @EnableWebSecurity
-    ![](images/20210622_004029.png)
+    ![](images/20210622_004402.png)
+
+    * antMatcher
+
+        *  특정 리소스에 대해서 권한을 설정합니다.
+
+    * permitAll
+
+        *  antMatchers 설정한 리소스의 접근을 인증절차 없이 허용한다는 의미 입니다.
+
+    * anyRequest
+
+        *  모든 리소스를 의미하며 접근허용 리소스 및 인증후 특정 레벨의 권한을 가진 사용자만 접근가능한 리소스를 설정하고 그외 나머지 리소스들은 무조건 인증을 완료해야 접근이 가능하다는 의미입니다.
+
+    * formLogin
+
+        * 로그인 페이지와 기타 로그인 처리 및 성공 실패 처리를 사용하겠다는 의미 입니다.
+
+        * 일반적인 로그인 방식 즉 로그인 폼 페이지와 로그인 처리 성공 실패 등을 사용하겠다는 의미입니다.
+
+            * Used to indicate a set of characters. In a set:
+
+    * defaultSuccessUrl
+
+        * 정상적으로 인증성공 했을 경우 이동하는 페이지를 설정합니다.
+
+        * defaultSuccessUrl("/main") main page로 이동
 
 ## Hibernate
 
