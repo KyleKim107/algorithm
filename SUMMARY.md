@@ -27,3 +27,5 @@
   * [Advanced](method/advanced.md)
 
 * [Tools]()
+  * [Git](Tools/git.md)
+  * [Git Issues](Tools/Git_Ussuses.md)

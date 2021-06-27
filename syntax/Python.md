@@ -30,6 +30,8 @@
 
     * (e.g. [-a] or [a-]), it will match a literal '-'.
 
+* ? : Causes the resulting RE to match 0 or 1 repetitions of the preceding RE. ab? will match either ‘a’ or ‘ab’.
+
 '''py
 
 import re

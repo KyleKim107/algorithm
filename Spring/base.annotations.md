@@ -25,6 +25,9 @@
 
 > @Entity
 > @Query
+> @Component
+> @Service
+> @Controller
 
 ## Testing Annotations
 
