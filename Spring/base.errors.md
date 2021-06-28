@@ -24,4 +24,6 @@
 
         * otherwise check Activity Monitor so that you can check which process using port 8080
 
-        * If the method above does not work, Kill the port listener with the command "lsof -n -i4TCP:8080" on Terminal
+        * If the method above does not work, Kill the port listener with the command "lsof -n -i4TCP:8080"
+
+            * then "kill -9 pid"on Terminal

@@ -55,6 +55,10 @@
 
         * defaultSuccessUrl("/main") main page로 이동
 
+    * GrandtedAutority
+
+        * we can think of each GrantedAuthority as an individual privilege
+
 ## Hibernate
 
 * Hibernate creates table if it does not exist
