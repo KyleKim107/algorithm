@@ -2,10 +2,12 @@
 
 * [Spring]()
   * [Annotation](Spring/base.annotations.md)
+  * [JPA](Spring/base.jpa.md)
   * [Method](Spring/base.method.md)
-  * [IntelliJ Shortcut](Spring/base.intelliJ_ShortCut.md)
   * [Library](Spring/base.library.md)
+  * [Interface](Spring/base.interface.md)
   * [Errors](Spring/base.errors.md)
+  * [IntelliJ_Shortcut](Spring/base.IntelliJ_ShortCut.md)
 
 * [Syntax](syntax/syntax.md)
   * [Operation](syntax/operation.md)

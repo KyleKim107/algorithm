@@ -23,6 +23,24 @@
 
         * TABLE : 유일성이 보장된 데이터베이스 테이블을 이용
 
+> @ Bean
+
+    * @Controller, @Service, and @Repository annotation make them bean object in root container.
+
+    * then let the spring use them on demand.
+
+> @Service
+
+    * 내부에서 자바 로직을 처리함
+
+> @Controller
+
+    * 웹 요청과 응답을 처리함
+
+> Repository
+
+    * DB나 파일같은 외부 I/O 작업을 처리함
+
 ## LOMBOK
 
 > @Getter and @Setter
@@ -64,9 +82,9 @@
 
         * primary key를 가지는 변수를 선언하는 것을 뜻한다
 
+        * The @Id annotation is mandatory for entities,
+        
         * @GeneratedValue 어노테이션은 해당 Id 값을 어떻게 자동으로 생성할지 전략을 선택할 수 있다
-
-        * AUTO
 
     > @Table
 
@@ -84,15 +102,70 @@
 
         * 그렇지 않은 경우에는 기본적으로 멤버 변수명과 일치하는 데이터베이스 컬럼을 매핑한다.
 
-> @Query
-> @Component
-> @Service
-> @Controller
+    > @OneToMany
+
+        * EX) if one department can employ for several employees
+
+    > @ManyToOne
+
+        * 회원과 팀은 N:1 관계
+
+        * many employees work in one department
+
+        * Many readers live in one area.
+
+        * Many subscriptions can be of one and the same reader.
+
+    > @GeneratedValue (strategy , generator)
+
+        * Generates Primary Key
+
+        * Without specifying a @GeneratedValue annotation, entity identifiers must be assigned manually. 
+
+        * strategy: 
+
+            * GenerationType: 
+
+                * IDENTITY: allows using a table identity column, like the MySQL AUTO_INCREMENT. 
+                
+                    * For JPA and Hibernate, you should prefer using SEQUENCE 
+
+                * SEQUENCE: allows using a database sequence object to generate identifier values. 
+
+                * TABLE: emulates the database sequence generator using a separate table.
+
+        * generator
+
+    > @SequenceGenerator(name ,sequenceName , allocationSize )
+
+        * Allow you customize the sequence generation process
+
+        * parameter
+
+            * name: he generator attribute of the @GeneratedValue  references the name attribute of the @SequenceGenerator
+
+            * sequence name: the name of the sequence in the DB
+
+            * needs to be the same value that the DB sequence uses as its "auto increment", usually use 1
+
+    > @Query
+
+        * 쿼리메서드 외에 JPA정의에 따른 sql문을 작성하고 싶을때, 혹은 DB종속적인 native쿼리를 작성하고 싶을 때 사용하는 어노테이션
+
+        * EX) @Query("SELECT b.bno, b.title, +"FROM Board b " + "LEF JOIN b.replies r WHERE b.bno > 0 GROUP BY b ")
+
+    > @Transactional
+
+        * 데이터베이스의 상태를 변경하는 작업 또는 한번에 수행되어야 하는 연산들을 의미한다.
+
+        * @Transactional(rollbackFor = Exception.class)하면 자동 롤백처리 됨으로
+
+    > @JoinColumn
+
+        * 외래키를 맵핑할떄
+
 > @EqualsAndHashCode
 > @NoArgsConstructor
-> @SequenceGenerator
-> @SequenceGenerator
-> @GeneratedValue
 > @Enuerated
 > @RestController
 > @RequestMapping
