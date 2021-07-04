@@ -10,7 +10,7 @@
   * [IntelliJ_Shortcut](Spring/base.IntelliJ_ShortCut.md)
 
 * [CS Study]()
-  *[Pre_Test](Computational_Thinking/a.md)
+  * [Pre_Test](Computational_Thinking/a.md)
 
 * [Syntax](syntax/syntax.md)
   * [Operation](syntax/operation.md)
