@@ -83,7 +83,7 @@
         * primary key를 가지는 변수를 선언하는 것을 뜻한다
 
         * The @Id annotation is mandatory for entities,
-        
+
         * @GeneratedValue 어노테이션은 해당 Id 값을 어떻게 자동으로 생성할지 전략을 선택할 수 있다
 
     > @Table
@@ -92,7 +92,7 @@
 
         * 기본적으로 @Entity로 선언된 클래스의 이름은 실제 데이터베이스의 테이블 명과 일치하는 것을 매핑한다.
 
-        * 따라서 @Entity의 클래스명과 데이터베이스의 테이블명이 다를 경우에 @Table(name=" ")과 같은 형식을 사용해서 매핑이 가능하다.
+        * 따라서 @Entity의 클래스명과 데이터베이스의 테이블명이 다를 경우에 @Table(name=" ")과 같은 형식을 사용해서 매핑이 가능하다.<br/>
 
     > @Column
 
@@ -120,17 +120,17 @@
 
         * Generates Primary Key
 
-        * Without specifying a @GeneratedValue annotation, entity identifiers must be assigned manually. 
+        * Without specifying a @GeneratedValue annotation, entity identifiers must be assigned manually.
 
-        * strategy: 
+        * strategy:
 
-            * GenerationType: 
+            * GenerationType:
 
-                * IDENTITY: allows using a table identity column, like the MySQL AUTO_INCREMENT. 
-                
-                    * For JPA and Hibernate, you should prefer using SEQUENCE 
+                * IDENTITY: allows using a table identity column, like the MySQL AUTO_INCREMENT.
 
-                * SEQUENCE: allows using a database sequence object to generate identifier values. 
+                    * For JPA and Hibernate, you should prefer using SEQUENCE
+
+                * SEQUENCE: allows using a database sequence object to generate identifier values.
 
                 * TABLE: emulates the database sequence generator using a separate table.
 
@@ -146,13 +146,13 @@
 
             * sequence name: the name of the sequence in the DB
 
-            * needs to be the same value that the DB sequence uses as its "auto increment", usually use 1
+            * needs to be the same value that the DB sequence uses as its "auto increment", usually use 1<br/>
 
     > @Query
 
         * 쿼리메서드 외에 JPA정의에 따른 sql문을 작성하고 싶을때, 혹은 DB종속적인 native쿼리를 작성하고 싶을 때 사용하는 어노테이션
 
-        * EX) @Query("SELECT b.bno, b.title, +"FROM Board b " + "LEF JOIN b.replies r WHERE b.bno > 0 GROUP BY b ")
+        * EX) @Query("SELECT b.bno, b.title, +"FROM Board b " + "LEF JOIN b.replies r WHERE b.bno > 0 GROUP BY b ")<br/>
 
     > @Transactional
 

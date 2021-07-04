@@ -23,3 +23,9 @@
             * findAll(): 레코드 갯수
 
             *  delete(): 레코드 삭제
+
+    > @Query 
+
+        * named parameter mapping
+
+        * 

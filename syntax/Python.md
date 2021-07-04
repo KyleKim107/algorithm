@@ -51,3 +51,11 @@ def solution(new_id):
     return st
 
 '''
+
+> Dictionary
+
+* Method
+
+  * dict.get(key, default = None)
+
+    * get() returns a value for the given key. If key is not available then returns default value None.
