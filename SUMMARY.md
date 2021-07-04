@@ -11,6 +11,7 @@
 
 * [CS Study]()
   * [Pre_Test](Computational_Thinking/a.md)
+  * [java](Computational_Thinking/b.md)
 
 * [Syntax](syntax/syntax.md)
   * [Operation](syntax/operation.md)
