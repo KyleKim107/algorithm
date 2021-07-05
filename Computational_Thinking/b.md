@@ -286,18 +286,18 @@
 
     * 많은 인스턴스를 생성해도 하나의 변수만 존재
 
-  * ![클래스 변수](images/20210705_205652.png)
+![클래스 변수](images/20210705_205652.png)
 
   > Static Method
 
-  * static method == class method
+* static method == class method
 
-  ![class](images/20210705_210440.png)
+![class](images/20210705_210440.png)
 
-  ![class2](images/20210705_210532.png)
+![class2](images/20210705_210532.png)
 
   > Final Vairable
 
-  * 할당된 값을 변경불가한 상수
+* 할당된 값을 변경불가한 상수
 
-  ![final](images/20210705_210905.png)
+![final](images/20210705_210905.png)
