@@ -59,3 +59,9 @@ def solution(new_id):
   * dict.get(key, default = None)
 
     * get() returns a value for the given key. If key is not available then returns default value None.
+
+## index slicing
+
+> list[ : :] - start : stop : step
+
+* So, when you do a[::-1], it starts from the end towards the first taking each element. So it reverses a.

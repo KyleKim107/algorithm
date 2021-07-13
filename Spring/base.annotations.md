@@ -29,6 +29,10 @@
 
     * then let the spring use them on demand.
 
+    * @Bean(name="memberService2")
+
+    * 항상 다른 이름을 사용하자
+
 > @Service
 
     * 내부에서 자바 로직을 처리함
@@ -163,6 +167,12 @@
     > @JoinColumn
 
         * 외래키를 맵핑할떄
+
+    > @Configuration
+
+    * @Configuration 을 적용하지 않고, @Bean 만 적용하면 어떻게 될까?
+
+        * Configuration 을 붙이면 바이트코드를 조작하는 CGLIB 기술을 사용해서 싱글톤을 보장하지만, 만약 @Bean만 적용하면 보장불가(순수한 자바코드)
 
 > @EqualsAndHashCode
 > @NoArgsConstructor
