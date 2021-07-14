@@ -170,15 +170,30 @@
 
     > @Configuration
 
+    * indicates that the class has @Bean definition methods.
+
     * @Configuration 을 적용하지 않고, @Bean 만 적용하면 어떻게 될까?
 
         * Configuration 을 붙이면 바이트코드를 조작하는 CGLIB 기술을 사용해서 싱글톤을 보장하지만, 만약 @Bean만 적용하면 보장불가(순수한 자바코드)
+
+    * 파라메터 안에 원하는 빈 이름을 지정할 수 있다
+
+        * @Component("classNameExample")
+    
+    > @ComponentScan()
+
+        * parameter: excludeFilters = @ComponentScan.Filter()
+
+        * componentScan은 configuration과 항상 함께온다
+
+        * configuration는 이게 xml을 대체하는 성정파일인것을 알려주고, componentscan으로 등록한다
 
 > @EqualsAndHashCode
 > @NoArgsConstructor
 > @Enuerated
 > @RestController
 > @RequestMapping
+> @Autowired
 
 ## Testing Annotations
 
