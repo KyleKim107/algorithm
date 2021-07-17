@@ -33,12 +33,12 @@
 ## Queue
 
 {% tabs %}
-{% tab title='queue.md' %}
+{% tab title='queue.java' %}
 
-queue.add(value);
-queue.remove();
-queue.peek();
-q.size()
+* queue.add(value);
+* queue.remove();
+* queue.peek();
+* q.size()
 
 ```java
 Queue<T> queue = new LinkedList<>();
@@ -56,7 +56,7 @@ queue.size()
 ## Deque
 
 {% tabs %}
-{% tab title='queue.md' %}
+{% tab title='deque.java' %}
 
 ```java
 
