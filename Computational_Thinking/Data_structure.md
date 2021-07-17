@@ -58,6 +58,8 @@ queue.size()
 {% tabs %}
 {% tab title='queue.md' %}
 
+```java
+
 Deque<> deque = new deque<>()
 
 deque.add("Element 1 (Tail)");
@@ -76,6 +78,8 @@ deque.offer("Element 5 (Tail)");
 
 // Add at the first
 deque.offerFirst("Element 6 (Head)");
+
+```
 
 {% endtab %}
 {% endtabs %}
