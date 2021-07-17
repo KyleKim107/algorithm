@@ -1,5 +1,81 @@
 # Syntax
 
+## Input
+
+{% tabs %}
+{% tab title='java.md' %}
+
+```java
+Scanner sc = new Scanner(System.in);
+
+String s1 = sc.next(); // next() will only return what comes before the delimiter (defaults to whitespace).
+
+String s2 = sc.nextLine(); // automatically moves the scanner down after returning the current line.
+
+int number = sc.nextInt() // get input()
+
+
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Contains
+
+{% tabs %}
+{% tab title='BOJ9012.md' %}
+
+괄호 쌍이 맞는지 판별하시오
+
+```txt
+
+Input:
+6
+(())())
+(((()())()
+(()())((()))
+((()()(()))(((())))()
+()()()()(()()())()
+(()((())()(
+
+Output:
+NO
+NO
+YES
+NO
+YES
+NO
+
+```
+
+{% endtab %}
+{% tab title='BOJ9012.java' %}
+
+```java
+
+package Data_Structure;
+
+import java.util.*;
+
+public class BOJ9012 {
+  public static void main(String[] rg) {
+        Scanner sc = new Scanner(System.in);
+        int tc = sc.nextInt();
+        while(tc-->0){ // decrement (--)  and compare with zero (>)
+            String s = sc.next();
+            while(s.contains("()")){
+                s = s.replace("()", "");
+            }
+            System.out.println(s.equals("") ? "YES" : "NO");
+        }
+  }
+}
+
+```
+
+{% endtab %}
+{% endtabs %}
+
 {% tabs %}
 {% tab title='javscript.md' %}
 
