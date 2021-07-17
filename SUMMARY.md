@@ -9,10 +9,11 @@
   * [Errors](Spring/base.errors.md)
   * [IntelliJ_Shortcut](Spring/base.IntelliJ_ShortCut.md)
 
-* [CS Study]()
+* [JAVA]()
   * [Pre_Test](Computational_Thinking/a.md)
   * [java](Computational_Thinking/b.md)
   * [Java Syntex](Computational_Thinking/javaSyntex.md)
+  * [Java Data Structure](Computational_Thinking/Data_structure)
 
 * [Syntax](syntax/syntax.md)
   * [Operation](syntax/operation.md)

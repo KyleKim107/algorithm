@@ -1,6 +1,14 @@
 # Syntax
 
+## String
+
+ > String.equals()
+
+* compare java string with the another value.
+
 ## Input
+
+> Scanner
 
 {% tabs %}
 {% tab title='java.md' %}
@@ -14,13 +22,16 @@ String s2 = sc.nextLine(); // automatically moves the scanner down after returni
 
 int number = sc.nextInt() // get input()
 
-
 ```
 
 {% endtab %}
 {% endtabs %}
 
+> BufferReader
+
 ## Contains
+
+* String.contains return true if the string has the sub-string that's in the parameter
 
 {% tabs %}
 {% tab title='BOJ9012.md' %}
