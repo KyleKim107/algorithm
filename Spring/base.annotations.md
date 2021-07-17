@@ -168,21 +168,33 @@
 
         * 외래키를 맵핑할떄
 
-    > @Configuration
+    > @Component
 
-    * indicates that the class has @Bean definition methods.
-
-    * @Configuration 을 적용하지 않고, @Bean 만 적용하면 어떻게 될까?
-
-        * Configuration 을 붙이면 바이트코드를 조작하는 CGLIB 기술을 사용해서 싱글톤을 보장하지만, 만약 @Bean만 적용하면 보장불가(순수한 자바코드)
-
-    * 파라메터 안에 원하는 빈 이름을 지정할 수 있다
+        * Spring will autodetect these classes for dependency injection
 
         * @Component("classNameExample")
+
+        > @Service
+        > @Repository
+        > @Controller
+
+    > @Configuration
+
+        * indicates that the class has @Bean definition methods.
+
+        * @Configuration 을 적용하지 않고, @Bean 만 적용하면 어떻게 될까?
+
+            * Configuration 을 붙이면 바이트코드를 조작하는 CGLIB 기술을 사용해서 싱글톤을 보장하지만, 만약 @Bean만 적용하면 보장불가(순수한 자바코드)
+
+        * 파라메터 안에 원하는 빈 이름을 지정할 수 있다
     
     > @ComponentScan()
 
-        * parameter: excludeFilters = @ComponentScan.Filter()
+        * parameter: 
+        
+            * excludeFilters = @ComponentScan.Filter()
+
+            * basePackages 스캔할 패키지를 정해준다.
 
         * componentScan은 configuration과 항상 함께온다
 
