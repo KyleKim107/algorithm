@@ -50,6 +50,7 @@ queue.size()
 
 ```
 
+{% endtab %}
 {% endtabs %}
 
 ## Deque
@@ -76,4 +77,5 @@ deque.offer("Element 5 (Tail)");
 // Add at the first
 deque.offerFirst("Element 6 (Head)");
 
+{% endtab %}
 {% endtabs %}
