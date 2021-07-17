@@ -3,7 +3,7 @@
 ## Stack
 
 {% tabs %}
-{% tab title='java.md' %}
+{% tab title='stack.md' %}
 
 * Stack.push() put a value into the stack
 * Stack.pop() remove a value at the end of the stack
@@ -28,4 +28,52 @@
 ```
 
 {% endtab %}
+{% endtabs %}
+
+## Queue
+
+{% tabs %}
+{% tab title='queue.md' %}
+
+queue.add(value);
+queue.remove();
+queue.peek();
+q.size()
+
+```java
+Queue<T> queue = new LinkedList<>();
+
+queue.add(value);
+queue.remove();
+queue.peek();
+queue.size()
+
+```
+
+{% endtabs %}
+
+## Deque
+
+{% tabs %}
+{% tab title='queue.md' %}
+
+Deque<> deque = new deque<>()
+
+deque.add("Element 1 (Tail)");
+
+// Add at the first
+deque.addFirst("Element 2 (Head)");
+
+// Add at the last
+deque.addLast("Element 3 (Tail)");
+
+// Add at the first
+deque.push("Element 4 (Head)");
+
+// Add at the last
+deque.offer("Element 5 (Tail)");
+
+// Add at the first
+deque.offerFirst("Element 6 (Head)");
+
 {% endtabs %}

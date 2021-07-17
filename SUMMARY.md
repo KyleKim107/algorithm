@@ -13,7 +13,7 @@
   * [Pre_Test](Computational_Thinking/a.md)
   * [java](Computational_Thinking/b.md)
   * [Java Syntex](Computational_Thinking/javaSyntex.md)
-  * [Java Data Structure](Computational_Thinking/Data_structure)
+  * [Java Data Structure](Computational_Thinking/Data_structure.md)
 
 * [Syntax](syntax/syntax.md)
   * [Operation](syntax/operation.md)
