@@ -41,12 +41,13 @@
 * q.size()
 
 ```java
+
 Queue<T> queue = new LinkedList<>();
 
 queue.add(value);
 queue.remove();
 queue.peek();
-queue.size()
+queue.size();
 
 ```
 
@@ -60,7 +61,7 @@ queue.size()
 
 ```java
 
-Deque<> deque = new deque<>()
+Deque<> deque = new LinkedList<>()
 
 deque.add("Element 1 (Tail)");
 
