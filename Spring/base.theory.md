@@ -1,5 +1,15 @@
 # Theory
 
+## Spring MVC
+
+* client - > dispacher Servlet -> Controller - business components
+
+* business components -> Controller -> View Resolver - > Views -> Dispatch Servlet
+
+* Client
+
+![mvc](images/20210720_011920.png)
+
 * Single ton
 
 > Bean Factory

@@ -1,11 +1,29 @@
 # Method
 
+## Printout
+
+> BufferedReader
+
+* Import
+
+  * java.io.BufferedReader
+
+  * java.io.InputStreamReader
+
+* Used with InputStreamReader
+
+  * BufferedReader br new BufferedReader( new InputStreamReader);
+
+* br.read() : It is used for reading a single character.
+
+* br.readLine() : It is used for reading a line of text.
+
 ## Sort
 
 * Integer.compare()
 
 {% tabs %}
-{% tab title='BJJ10814.md' %}
+{% tab title='BOJ10814.md' %}
 
 * In this example you can compare two value (age and name in this case)
 
@@ -48,3 +66,51 @@ public class Main {
 
 {% endtab %}
 {% endtabs %}
+
+## get Length of Arrays
+
+{% tabs %}
+{% tab title='java.md' %}
+> Get input
+> object of length
+
+* String
+
+  * String.length()
+
+```java
+
+String.length()
+
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Type Conversion
+
+> From String to int
+
+* Integer.parseInt(String)
+
+* subtract number from the string
+
+  * "A"- 64 ==> printout 1
+
+* Convert from lower case to upper case
+
+{% tabs %}
+{% tab title='upper.java' %}
+
+```jave
+String name = "Kyle";
+
+name = name..toUpperCase();
+
+System.out.println(name)
+// KYLE
+
+```
+
+{% endtab %}
+{% endtabs%}
