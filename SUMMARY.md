@@ -28,6 +28,7 @@
   * [Hash](data-structure/hash.md)
   * [Graph](data-structure/graph.md)
   * [Tree](data-structure/tree.md)
+  * [Stack](data-structure/stack.md)
 
 * [Method]()
   * [Sort](method/sort.md)

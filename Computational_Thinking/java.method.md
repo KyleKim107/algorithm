@@ -18,6 +18,41 @@
 
 * br.readLine() : It is used for reading a line of text.
 
+* Exception:
+
+  * throws IOException
+
+{% tabs%}
+{% tab title='BufferedReader.java' %}
+
+```jave
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class BufferedReaderWithProf {
+
+      public static void main(String[] args) throws IOException {
+
+          BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+          int N = Integer.parseInt(br.readLine()); // 버퍼는 한번 읽을떄 한줄씩 읽어 버린다
+
+          for (int i = 0; i < N; i++) {
+                        grid[i] = br.readLine().replace(" ", "").toCharArray();
+                        // 한줄을 읽은 다음 replace로 변경함 그리고 char array에 한글짜씩 넣음
+                        System.out.println(Arrays.toString(grid[i]));
+                    }
+
+      }
+}
+
+```
+
+{% endtab%}
+{% endtabs%}
+
 ## Sort
 
 * Integer.compare()
@@ -66,6 +101,30 @@ public class Main {
 
 {% endtab %}
 {% endtabs %}
+
+{% tabs %}
+{% tab title = 'compare.java' %}
+
+```java
+
+ Arrays.sort(student, new Comparator<int[]>() {
+                @Override
+                public int compare(final int[] entry1, final int[] entry2) {
+
+                    // To sort in descending order revert
+                    // the '>' Operator
+                    if (entry1[0] < entry2[0]) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
+                }
+
+            });
+```
+
+{% tab %}
+{% tabs %}
 
 ## get Length of Arrays
 
