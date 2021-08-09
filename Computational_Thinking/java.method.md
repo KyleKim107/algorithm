@@ -131,20 +131,7 @@ public class SW9229 {
 
 ```java
 
-public class Combination {
-    public static void main(String[] args) {
-        int n = 4;
-        int[] arr = {1, 2, 3, 4};
-        boolean[] visited = new boolean[n];
-
-        for (int i = 1; i <= n; i++) {
-            System.out.println("\n" + n + " 개 중에서 " + i + " 개 뽑기");
-            comb(arr, visited, 0, n, i);
-        }
-
-    }
-
-        // 재귀 사용
+ // 재귀 사용
         // 사용 예시 : comb(arr, visited, 0, n, r)
         static void comb(int[] arr, boolean[] visited, int depth, int n, int r) {
             if (r == 0) {
@@ -161,6 +148,19 @@ public class Combination {
             visited[depth] = false;
             comb(arr, visited, depth + 1, n, r);
         }
+
+public class Combination {
+    public static void main(String[] args) {
+        int n = 4;
+        int[] arr = {1, 2, 3, 4};
+        boolean[] visited = new boolean[n];
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println("\n" + n + " 개 중에서 " + i + " 개 뽑기");
+            comb(arr, visited, 0, n, i);
+        }
+
+    }
 
     // 배열 출력
     static void print(int[] arr, boolean[] visited, int n) {
