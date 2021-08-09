@@ -187,11 +187,11 @@
             * Configuration 을 붙이면 바이트코드를 조작하는 CGLIB 기술을 사용해서 싱글톤을 보장하지만, 만약 @Bean만 적용하면 보장불가(순수한 자바코드)
 
         * 파라메터 안에 원하는 빈 이름을 지정할 수 있다
-    
+
     > @ComponentScan()
 
-        * parameter: 
-        
+        * parameter:
+
             * excludeFilters = @ComponentScan.Filter()
 
             * basePackages 스캔할 패키지를 정해준다.
@@ -206,6 +206,37 @@
 > @RestController
 > @RequestMapping
 > @Autowired
+> @ComponentScan
+
+* @ComponentScan은 @Component가 붙은 모든 클래스들을 스프린빈으로 등록한다
+
+* @Component 면 충분하기 때문에, includeFilters 를 사용할 일은 거의 없다.
+
+* excludeFilters 는 여러가지 이유로 간혹 사용할 때가 있지만 많지는 않다.특히 최근 스프링 부트는 컴포넌트 스캔을 기본으로 제공한다
+
+* 개인적으로는 옵션을 변경하면서 사용하기 보다는 스프링의 기본 설정에 최대한 맞추어 사용하는 것을 권장하고, 선호하는 편이다.
+
+![componentScan](images/20210807_144210.png)
+
+* 기본대상
+
+* @Component
+
+* @Controller : MVC constroller
+
+* @Service  : 스프링 데이터 접근 계층으로 인식하고, 데이터 계층의 예외를 스프링 예외로 변환해준다.
+
+* @Configuration : 앞서 보았듯이 스프링 설정 정보로 인식하고, 스프링 빈이 싱글톤을 유지하도록 추가 처리를 한다.
+
+* @Repository
+
+* @Configuration
+
+> @SpringBootApplication
+
+* Run Spring Boot
+
+* Including @ComponentScan
 
 ## Testing Annotations
 

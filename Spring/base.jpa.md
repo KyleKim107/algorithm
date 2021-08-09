@@ -24,8 +24,8 @@
 
             *  delete(): 레코드 삭제
 
-    > @Query 
+    > @Query
 
         * named parameter mapping
 
-        * 
+> JpaRepository< Employee , Long>
