@@ -1,0 +1,3 @@
+# Java Theory
+
+* Functional Interface

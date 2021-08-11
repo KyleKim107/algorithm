@@ -433,3 +433,41 @@ System.out.println(name)
 
 {% endtab %}
 {% endtabs%}
+
+## String
+
+* toLowerCase()
+
+  * Switch all of the Uppercase alphabets into lowercase.
+
+* replaceAll()
+
+  * switch all of the String element in the first parameter
+
+  * EX)
+
+    * temp.replaceAll("[^-_.a-z0-9]","");
+
+![regex](images/20210810_111625.png)
+
+{& tabs &}
+{& tab title = 'Regex.java' &}
+
+```java
+
+String temp = "...!@BaT#*..y.abcdefghijklm";
+temp = temp.replaceAll("[^-_.a-z0-9]",""); //"^String" ^다음의 문자들을 제외한것을 제거한다
+// printout: "...bat..y.abcdefghijklm"
+
+// ^가 대괄호 밖에있다면 라인의 첫번째를 말한다
+// $는 라인의 끝
+
+
+```
+
+{& endtab &}
+{& endtabs &}
+
+* String.substring(start , end);
+
+  * 해당 인덱스에 포함된 문자열들을 리턴한다
