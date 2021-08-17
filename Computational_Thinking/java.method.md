@@ -4,119 +4,38 @@
 
 * 부분수열의 모든 경우를 고려한다
 
+* 조합(Combination)과 매우 흡사하다.
+
+  * 하지만 파워셋은 base case에서 다른 조건없이( 특정 원소 갯수에서 끝나는게 아니라 ) 그저 배열을 한바퀴 순회 한다면 끝내고 출력해주는것이다.
+
 {% tabs %}
-{% tab title='SW5215.java' %}
+{% tab title='PowerSet.java' %}
 
-평소 햄버거를 좋아하던 민기는 최근 부쩍 늘어난 살 때문에 걱정이 많다.
-
-그렇다고 햄버거를 포기할 수 없었던 민기는 햄버거의 맛은 최대한 유지하면서 정해진 칼로리를 넘지 않는 햄버거를 주문하여 먹으려고 한다.
-
-민기가 주로 이용하는 햄버거 가게에서는 고객이 원하는 조합으로 햄버거를 만들어서 준다.
-
-하지만 재료는 미리 만들어서 준비해놓기 때문에 조합에 들어가는 재료를 잘라서 조합해주지는 않고, 재료를 선택하면 준비해놓은 재료를 그대로 사용하여 조합해준다.
-
-민기는 이 가게에서 자신이 먹었던 햄버거의 재료에 대한 맛을 자신의 오랜 경험을 통해 점수를 매겨놓았다.
-
-민기의 햄버거 재료에 대한 점수와 가게에서 제공하는 재료에 대한 칼로리가 주어졌을 때,
-
-민기가 좋아하는 햄버거를 먹으면서도 다이어트에 성공할 수 있도록 정해진 칼로리 이하의 조합 중에서 민기가 가장 선호하는 햄버거를 조합해주는 프로그램을 만들어보자.
+부분 집합
+집합의 개수가 n개 라고 할 때 부분집합의 시간복잡도는 O(2^n)
 
 ```java
 
+class PowerSet {
+    public static int[] arr;
 
-    public static int satisfy = 0;
-    public static int total, hamNum;
-    public static int[][] arr;
-
-    public static void func(int numEle , int totalSatisfaction , int totalCal ){
-        if(totalCal > total){
+    public static void powerSet(int depth, int[] visit){
+        if(depth == arr.length){
+            System.out.println(Arrays.toString(arr[i]));
             return;
         }
-        if(numEle == hamNum){
-            satisfy = Math.max(totalSatisfaction ,satisfy );
-            return;
-        }
-        func(numEle +1 , totalSatisfaction + arr[numEle][0] , totalCal + arr[numEle][1] ); // 고르고
-        func(numEle +1 , totalSatisfaction  , totalCal ); // 안고르고
+        visit[depth] = 1;
+        powerSet(depth + 1 ; visit);
+        visit[depth] = 0;
+        powerSet(depth + 1 ; visit);
+
     }
 
-    public static void main(String[] args) throws IOException{
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int TC = Integer.parseInt( br.readLine());
-                StringTokenizer str = null;
-
-        for(int test_case = 1; test_case <= TC; test_case++)
-        {
-            satisfy = 0;
-             str = new StringTokenizer(br.readLine()) ;
-            hamNum = Integer.parseInt(str.nextToken());
-            total = Integer.parseInt(str.nextToken());
-            arr = new int[hamNum][2];
-            int[] visit = new int[hamNum];
-            for(int i = 0 ; i < hamNum ; i++){
-                str = new StringTokenizer(br.readLine()) ;
-                    arr[i][0]=  Integer.parseInt(str.nextToken());
-                    arr[i][1]= Integer.parseInt(str.nextToken());
-            }
-            func( 0,0,0);
-            System.out.printf("#%d %d\n" ,test_case, satisfy);
-        }
+    public static void main(String[] args){
+        arr= new int[]{1,2,3,4,5};
+        powerSet(0 , new int[arr.length]);
     }
-
-```
-
-{% endtab %}
-{% endtabs %}
-
-* 부분수열의 특정 경우만 고려하는 경우
-
-{% tabs %}
-{% tab title='SW9229.java' %}
-
-```java
-
-
-import java.util.*;
-import java.io.*;
-
-public class SW9229 {
-    public static int max;
-    public static int[]  arr;
-    public static int  maxV = -1;
-
-    public static void func(  int currWeight , int depth,  int r){
-        if (currWeight > max){return;}
-        if(r == 0){
-            maxV = Math.max(maxV ,currWeight );
-            return;
-        }
-        if(depth == arr.length){return;}
-
-        func(  currWeight + arr[depth] , depth+1 ,   r -1);
-        func(  currWeight , depth+1 ,   r);
-    }
-
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int TC = Integer.parseInt( br.readLine());
-        StringTokenizer str = null;
-        for(int test_case = 1; test_case <= TC; test_case++){
-            str = new StringTokenizer(br.readLine());
-            int len = Integer.parseInt(str.nextToken());
-            max = Integer.parseInt(str.nextToken());
-            str = new StringTokenizer(br.readLine());
-            arr = new int[len];
-            for(int i = 0 ; i < len ; i++){
-                arr[i] = Integer.parseInt(str.nextToken());
-            }
-            maxV = -1;
-            func(  0 , 0 ,   2);
-            System.out.println("#" + test_case + " "+maxV);
-        }
-    }
-
-}
+ }
 
 
 ```
@@ -127,7 +46,11 @@ public class SW9229 {
 ## Combination
 
 {% tabs %}
-{% tab title='Permutatoin.java' %}
+{% tab title='Combination.java' %}
+
+조합 :
+시간 복잡도 -> O(2^n)
+nCr= n! / (n−r)! * r!
 
 ```java
 
@@ -222,6 +145,13 @@ public class Permutation {
 
 {% tabs %}
 {% tab title='Permutation.java' %}
+
+순열 방법 :
+시간 복잡도 -> O(n!)
+nPn -> n!
+개수 -> 11! = 4000만
+11!까지는 가능 12!은 4.8억 -> 5초
+nPr= n! / (n−r)!
 
 ```java
 
@@ -447,6 +377,28 @@ System.out.println(name)
   * EX)
 
     * temp.replaceAll("[^-_.a-z0-9]","");
+
+      * ^ means Find one character NOT between the brackets
+
+      * therefore, the statement will replace all of characters not consisted of the char in the bracket
+
+  * n{x}
+
+    * Matches any string that contains a sequence of X n's
+
+  * Ex>
+
+    * temp = temp.replaceAll("[.]{2,}",".");
+
+    * The statement will replace the characters that seconse of dot.
+
+* ^[] and []$
+
+  * ^["x"] means that the string starts with the char, 'x'
+
+  * ["x"]$ means that the string ends with the char, 'x'
+
+  * temp = temp.replaceAll("^[.]|[.]$","");
 
 ![regex](images/20210810_111625.png)
 
