@@ -12,6 +12,9 @@
 5 6
 ```
 
+{% endtabs%}
+
+{% tabs%}
 {% tab title='Union_Find.java' %}
 
 ```java
