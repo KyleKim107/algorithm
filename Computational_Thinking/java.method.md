@@ -423,3 +423,5 @@ temp = temp.replaceAll("[^-_.a-z0-9]",""); //"^String" ^다음의 문자들을 �
 * String.substring(start , end);
 
   * 해당 인덱스에 포함된 문자열들을 리턴한다
+
+## Integer.toBinaryString()

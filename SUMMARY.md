@@ -36,6 +36,7 @@
   * [Divide Concur](method/divide-concur.md)
   * [Dynamic Programming](method/dynamic-programming.md)
   * [Advanced](method/advanced.md)
+  * [Graph](method/graph.md)
 
 * [Tools]()
   * [Git](Tools/git.md)
