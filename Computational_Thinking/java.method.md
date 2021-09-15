@@ -458,3 +458,57 @@ temp = temp.replaceAll("[^-_.a-z0-9]",""); //"^String" ^다음의 문자들을 �
   * 해당 인덱스에 포함된 문자열들을 리턴한다
 
 ## Integer.toBinaryString()
+
+## UNION FIND
+
+{% tabs %}
+{% tab title='LC_547.md' %}
+
+> Question
+
+* Problem [https://programmers.co.kr/learn/courses/30/lessons/64063]
+
+```txt
+Input: k = 10,  room_number = [1,3,4,1,3,1]
+Output: 2
+```
+
+```java
+import java.util.*;
+
+class Solution {
+    HashMap<Long, Long> map = new HashMap<>();
+
+        public long[] solution(long k, long[] room_number) {
+            long[] answer = new long[room_number.length];
+
+            for(int i = 0; i < room_number.length; i++){
+                System.out.println(room_number[i]);
+                answer[i] = findEmptyRood(room_number[i]);
+                Iterator it = map.entrySet().iterator();
+                while(it.hasNext()){
+                     Map.Entry tmp = (Map.Entry)it.next();
+                    System.out.println( "tmp.getKey() : "+tmp.getKey() + " " + " tmp.getValue() : "+tmp.getValue() );
+                }
+                System.out.println();
+            }
+            return answer;
+        }
+
+        long findEmptyRood(long request){
+
+            if(!map.containsKey(request)){
+                map.put(request, request+1);
+                return request;
+            }
+
+            long next_room = map.get(request);
+            long empty_room = findEmptyRood(next_room);
+            map.put(request, empty_room);
+            return empty_room;
+        }
+}
+```
+
+{% endtab %}
+{% endtabs %}

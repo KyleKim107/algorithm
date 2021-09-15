@@ -11,7 +11,7 @@ Output: 2
 ```
 
 {% endtab %}
-{% tab title='LC_547.java' %}
+{% tab title='PG_hotel.java' %}
 
 ```java
 import java.util.*;
