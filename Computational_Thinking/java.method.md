@@ -46,6 +46,30 @@ class PowerSet {
 ## Combination
 
 {% tabs %}
+{% tab title='Combination_forloop.java' %}
+
+포룹으로 조합 구현하기, 만약 골라야할 집합의 크기가 크다면 시간초과가 나올 수도 있다.
+만약 집합의 크기가 크고 골라야 할 숫자가 적다면 포룹으로 시간초과를 피하자
+앞에서 이미 골라준 숫자를 뽑지않는게 포인트다.
+
+```java
+
+ for (int i = 0; i < N; i++) {
+    for (int j = i + 1; j < N; j++) { // 전 룹의 인덱스의+1부터 시작해 중복을 없애준다!
+        for (int k = j + 1; k < N; k++) {
+            if (arr[i] + arr[j] + arr[k] <= M) {
+                maxV = Math.max(maxV, arr[i] + arr[j] + arr[k]);
+            }
+        }
+    }
+}
+
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title='Combination.java' %}
 
 조합 :
@@ -101,47 +125,32 @@ public class Combination {
 {% endtab %}
 {% endtabs %}
 
+## Permutation
+
 {% tabs %}
-{% tab title='Permutatoin.java' %}
+{% tab title='Permutatoin_forloop.java' %}
+
+포룹으로 순열 구현하기, 만약 골라야할 집합의 크기가 크다면 시간초과가 나올 수도 있다.
+만약 집합의 크기가 크고 골라야 할 숫자가 적다면 포룹으로 시간초과를 피하자
 
 ```java
 
-public class Permutation {
-    public static void func(int[] arr, int[] used, int depth) {
-        if (depth == arr.length) {
-            for (int n : arr) {
-                System.out.print(n + " ");
-            }
-            System.out.println();
-            return;
-        }
-        for (int i = 0; i < arr.length; i++) {
-            if (used[i] == 0) {
-                used[i] = 1;
-                arr[depth] = i + 1;
-                func(arr, used, depth + 1);
-                arr[depth] = 0;
-                used[i] = 0;
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+        if (j == i) {continue;} // 앞에서 끝까지 겹치지 않는 숫자들을 골라준다
+        for (int k = 0; k < N; k++) {
+            if (k == i || k == j) { continue;}
+            if (arr[i] + arr[j] + arr[k] <= M) {
+                maxV = Math.max(maxV, arr[i] + arr[j] + arr[k]);
             }
         }
     }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        int[] arr = new int[num];
-        int[] used = new int[num];
-        func(arr, used, 0);
-    }
-
 }
 
 ```
 
 {% endtab %}
 {% endtabs %}
-
-## Permutation
 
 {% tabs %}
 {% tab title='Permutation.java' %}
@@ -246,6 +255,30 @@ public class BufferedReaderWithProf {
 ## Sort
 
 * Integer.compare()
+
+{% tabs %}
+{% tab title='BOJ10814.md' %}
+
+Datatype.compare( a , b) : 오름차순으로 정렬한다.
+
+-(minus) Datatype.compare( a , b) : 오름차순으로 정렬한다.
+
+```java
+
+Comparator<node> f = new Comparator<node>() {
+    @Override
+    public int compare(node o1, node o2) {
+        if (o1.failRate == o2.failRate) { // 만약 실패율이 같다면 idx(스테이지)를 오름차순으로
+            return Integer.compare(o1.idx, o2.idx);
+        }
+        return -Double.compare(o1.failRate, o2.failRate); // 실패율이 다르다면 실패율을 내림차순으로.
+    }
+};
+
+```
+
+{% endtab %}
+{% endtabs %}
 
 {% tabs %}
 {% tab title='BOJ10814.md' %}

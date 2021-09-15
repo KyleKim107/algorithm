@@ -85,6 +85,40 @@ deque.offerFirst("Element 6 (Head)");
 {% endtab %}
 {% endtabs %}
 
+## Priority Queue
+
+{% tabs %}
+{% tab title='PQ.java' %}
+
+```java
+
+  PriorityQueue<People> process = new PriorityQueue<People>(new Comparator<People>(){
+            @Override
+            public int compare(People a , People b){
+                // 기다려야 할 시간이 같을 경우에는 가장 번호가 작은 계산대로 안내를 한다
+                if(a.time == b.time){
+                    return a.counter - b.counter;
+                }
+                return a.time - b.time;
+            }
+        });
+
+        PriorityQueue<People> leaving = new PriorityQueue<People>(new Comparator<People>(){
+            @Override
+            public int compare(People a , People b){
+                // 기다려야 할 시간이 같을 경우에는 가장 번호가 작은 계산대로 안내를 한다
+                if(a.time == b.time){
+                    return b.counter - a.counter;
+                }
+                return a.time - b.time;
+            }
+        });
+
+```
+
+{% endtab %}
+{% endtabs %}
+
 ## Heap
 
 * Max Heap
@@ -93,7 +127,7 @@ deque.offerFirst("Element 6 (Head)");
 {% tab title='Heap.java' %}
 
 Heaptify하는데 Log N 만큼의 시간복잡도가 요구된다
-    자식 노드들과 비교하며, 자식보다 부모 노드가 클때까지 밑으로 타고 내려간다
+자식 노드들과 비교하며, 자식보다 부모 노드가 클때까지 밑으로 타고 내려간다
 
 ```java
 
@@ -174,8 +208,6 @@ public class MaxHeap {
         }
     }
 }
-
-
 
 class HeepTest {
     public static void main(String[] args) {
