@@ -512,3 +512,20 @@ class Solution {
 
 {% endtab %}
 {% endtabs %}
+
+## Iterating HashMap
+
+{% tabs %}
+{% tab title='hashmap.java' %}
+
+```java
+Iterator it = map.entrySet().iterator();
+while(it.hasNext()){
+    Map.Entry tmp = (Map.Entry)it.next();
+    System.out.println( "tmp.getKey() : "+tmp.getKey() + " " + " tmp.getValue() : "+tmp.getValue() );
+}
+
+```
+
+{% endtab %}
+{% endtabs %}
