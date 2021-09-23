@@ -1,12 +1,35 @@
 # Algorithm Theory
 
+## MST
+
 ## KMP
 
 {% tabs%}
-{% tab title='LIS.java' %}
+{% tab title='input.txt' %}
 
-// ababacabacaabacaaba
-// abacaaba
+input
+
+```txt
+
+ababacabacaabacaaba
+abacaaba
+
+```
+
+{% endtab %}
+{% tab title='KMP.java' %}
+
+- 불일치가 발생한 텍스트 문자열의 앞부분에 어떤 문자가 있는지 미리 알고 있기 때문에 불일치가 발생한 앞부분에 대해서 다시 비교하지 않으면서 매칭이 일어나는지 판단할 수 있는 알고리즘입니다.
+
+j 위치의 문자열과 i 위치의 문자열이 일치하지 않을 경우:
+
+- 접두사와 접미사가 일치하지 않는다는 것이므로 다시 검사를 해야하는데 이때 아예 처음으로 돌아갈 수도 있으나 비효율적입니다.
+
+- 그래서 여태까지 일치했던 곳에서부터 다시 검사를 하는 것이 유리합니다. 따라서 pi배열을 참고하여 j의 위치를 pi[j - 1]에서 가리키는 위치로 이동시켜봅니다.
+
+- j - 1인 이유는 최소 j - 1 위치까지는 접두사와 접미사가 일치했다는 것이므로 이동을 최소화할 수 있기 때문입니다. 이동을 시킨 후 다시 일치하는지 검사를 합니다.
+
+TIME COMPLEXITY: O(word + pattern)
 
 ```java
 
