@@ -2,6 +2,95 @@
 
 ## MST
 
+{% tabs%}
+
+- 시작점과 끝점을 우선순위큐나 ArrayList에 담고 소트로 cost가 적은 오름차순으로 정렬해줍니다
+
+- 큐를 하나씩 꺼내주며 시작점과 끝점의 부모를 찾은후 부모가 같다면 Cycle이기에 무시해줍니다.
+
+- 부모가 다르다면 두 점을 서로 연결해주고 값을 더해줍니다.
+
+{% tab title='MST.java' %}
+
+```java
+
+public class SW3124 {
+    public static int[] arr;
+
+    static int find(int x) {
+        if (arr[x] != x) {
+            return arr[x] = find(arr[x]);
+        }
+        return x;
+    }
+
+    static void union(int x, int y) {
+        x = find(x);
+        y = find(y);
+
+        if ( x > y) {
+            arr[x] = y;
+        } else {
+            arr[y] = x;
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int TC = Integer.parseInt(br.readLine());
+        for (int test_case = 1; test_case <= TC; test_case++) {
+
+            StringTokenizer str = new StringTokenizer(br.readLine());
+            int V = Integer.parseInt(str.nextToken()), E = Integer.parseInt(str.nextToken());
+            arr = new int[V + 1];
+            for (int i = 1; i < V + 1; i++) {
+                arr[i] = i;
+            }
+            PriorityQueue<Node> PQ = new PriorityQueue<Node>();
+            for (int i = 0; i < E; i++) {
+                str = new StringTokenizer(br.readLine());
+                int start = Integer.parseInt(str.nextToken());
+                int end = Integer.parseInt(str.nextToken());
+                int value = Integer.parseInt(str.nextToken());
+                PQ.offer(new Node(start, end, value));
+            }
+
+            long answer = 0;
+            for (int i = 0; i < PQ.size(); i++) {
+                Node tmp = PQ.poll();
+                int start = tmp.start, end = tmp.end, value = tmp.value;
+                if (find(start) == find(end))
+                    continue;
+                union(start, end);
+                answer += value;
+            }
+            System.out.println("#" + test_case + " " + answer);
+        }
+    }
+
+    static class Node implements Comparable<Node> {
+        int value, end, start;
+
+        public Node(int start, int end, int value) {
+            super();
+            this.value = value;
+            this.end = end;
+            this.start = start;
+        }
+
+        @Override
+        public int compareTo(Node a) { // compareTo는 상대꺼만, compare은 둘다
+            return Integer.compare(this.value , a.value);
+        }
+    }
+
+}
+
+```
+
+{% endtab %}
+{% endtabs %}
+
 ## KMP
 
 {% tabs%}
