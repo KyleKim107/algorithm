@@ -15,6 +15,7 @@
   * [Java Syntex](Computational_Thinking/javaSyntex.md)
   * [Java Data Structure](Computational_Thinking/Data_structure.md)
   * [Method](Computational_Thinking/java.method.md)
+  * [Theory](Computational_Thinking/java.theory.md)
 
 * [Syntax](syntax/syntax.md)
   * [Operation](syntax/operation.md)
